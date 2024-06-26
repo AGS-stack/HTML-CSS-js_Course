@@ -1,0 +1,57 @@
+
+.thumbnail {
+    width: 100%;
+    /* height:300px; */
+    /* object-fit: contain;this tells the image to cover this 300*300 area but it also gona keep it's shape , this determins what happens if this size does'nt match the images dimentions */
+    /* object-position: right;now we can adjust which part of image that we see */
+    /* display: block;inline-block => block */
+}
+
+.video-title {
+    width: 100%;
+    margin-top: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+/* .video-author,
+.video-stats {
+    display: inline-block; note block => inline-block and becouse of the paragraph os block and we need thise two lines separated then we will get raid of thiese classes
+} */
+.div-example {
+    display: inline-block;
+}
+/* .video-preview {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+} */
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+    width: 40px;
+    border-radius: 50px;
+    
+}
+.thumbnail-row {
+    margin-bottom: 15px;
+}
+.video-stats,
+.video-author {
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+}
+.video-author {
+    margin-bottom: 4px;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 10px;
+}

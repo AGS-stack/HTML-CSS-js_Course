@@ -7,76 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-    <style>
-        p {
-            font-family: Roboto, Arial;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        .thumbnail {
-            width: 100%;
-            /* height:300px; */
-            /* object-fit: contain;this tells the image to cover this 300*300 area but it also gona keep it's shape , this determins what happens if this size does'nt match the images dimentions */
-            /* object-position: right;now we can adjust which part of image that we see */
-            /* display: block;inline-block => block */
-        }
-        .search-bar {
-            font-size: 20px;
-            display: block;
-        }
-        .video-title {
-            width: 100%;
-            margin-top: 0px;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
-            margin-bottom: 12px;
-        }
-        /* .video-author,
-        .video-stats {
-            display: inline-block; note block => inline-block and becouse of the paragraph os block and we need thise two lines separated then we will get raid of thiese classes
-        } */
-        .div-example {
-            display: inline-block;
-        }
-        /* .video-preview {
-            width: 300px;
-            display: inline-block;
-            vertical-align: top;
-            margin-right: 15px;
-        } */
-        .video-info-grid {
-            display: grid;
-            grid-template-columns: 50px 1fr;
-        }
-        
-        .profile-picture {
-            width: 40px;
-            border-radius: 50px;
-            
-        }
-        .thumbnail-row {
-            margin-bottom: 15px;
-        }
-        .video-stats,
-        .video-author {
-            font-size: 12px;
-            color: rgb(96, 96, 96);
-        }
-        .video-author {
-            margin-bottom: 4px;
-        }
-        .video-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 16px;
-            row-gap: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/general.css">
 </head>
 <body>
-    <input class="search-bar" type="text" placeholder="Search">
+    <div class="header">
+        <div class="left-section">
+            <img class="hamburger-menu" src="icons/hamburger-menu.svg" alt="hamburger-menu">
+            <img class="youtube-logo" src="icons/youtube-logo.svg" alt="youtube-logo">
+        </div>
+        <div class="middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+        </div>
+        <div class="right-section">right-section</div>
+    </div>
     <!-- Note : block element take up the entire line , we can easily change this to inline-block using the display properity -->
     <!-- div and paragrafe(p) by default is a block element -->
     <!-- the key fearure of a div is it can contain other element that's why the div is so useful -->
