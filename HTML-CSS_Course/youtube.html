@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/video.css">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
 </head>
 <body>
     <div class="header">
@@ -25,7 +26,7 @@
         <div class="right-section">
             <img class="upload-icon" src="icons/upload.svg" alt="upload">
             <img class="youtube-apps-icon" src="icons/youtube-apps.svg" alt="youtube-apps">
-            <img class="notifications-icon" src="icons/notifications.svg" alt="notifications">
+            <div class="notification-icon-container"><img class="notifications-icon" src="icons/notifications.svg" alt="notifications"><div class="notification-count">3</div></div>
             <img class="current-user-icon" src="channel-picture/channel-1.jpeg" alt="channel picture">
         </div>
     </div>
@@ -34,10 +35,12 @@
     <!-- the key fearure of a div is it can contain other element that's why the div is so useful -->
     <!-- divs ar meant to be containers  -->
     <!-- block element takes up the entire line in their container -->
+    <div class="sidebar">sidebar</div>
     <div class="video-grid">
         <div class="video-preview">
             <div class="thumbnail-row">
                 <img class="thumbnail" src="thumbnails\thumbnail-1.webp" alt="thumbnail-1">
+                <div class="video-time">14:20</div>
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
