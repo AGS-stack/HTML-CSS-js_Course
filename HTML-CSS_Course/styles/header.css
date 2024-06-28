@@ -12,7 +12,7 @@
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color:rgb(192, 192, 192);
-    z-index:1;
+    z-index:100;
     /* border-style: solid;
     align-items: center;
     border-width: 1px;
@@ -61,9 +61,43 @@
     border-color: rgb(192, 192, 192);
     margin-left: -1px;
 }
+.search_button,
+.uplead-button,
+.apps-button,
+.notification-icon-container,
+.voice-search-button {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.search_button .tooltip,
+.uplead-button .tooltip,
+.apps-button .tooltip,
+.notification-icon-container .tooltip,
+.voice-search-button .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding:4px 8px;
+    border-radius: 4px;
+    bottom: -35px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.search_button:hover .tooltip,
+.uplead-button:hover .tooltip,
+.apps-button:hover .tooltip,
+.notification-icon-container:hover .tooltip,
+.voice-search-button:hover .tooltip {
+    opacity: 1;
+}
+
 .search-icon{
     height:25px;
-    margin-top:4px;
 }
 .voice-search-button {
     height:40px;
@@ -75,7 +109,6 @@
 }
 .voice-search-icon {
     height:24px;
-    margin-top:4px;
 }
 .search-bar {
     /*normaly search bars have a default width wecan't see that because we set flex to 1 so it sort of growing with the page but as soon as it hits the default width it's not gonna down anymore*/

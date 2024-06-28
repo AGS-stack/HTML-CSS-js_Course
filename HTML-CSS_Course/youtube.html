@@ -14,91 +14,101 @@
     <link rel="icon" href="icons/favicon_32x32.ico">
 </head>
 <body>
-    <div class="header">
+    <header class="header">
         <div class="left-section">
             <img class="hamburger-menu" src="icons/hamburger-menu.svg" alt="hamburger-menu">
             <img class="youtube-logo" src="icons/youtube-logo.svg" alt="youtube-logo">
         </div>
         <div class="middle-section">
             <input class="search-bar" type="text" placeholder="Search">
-            <button class="search_button"><img class="search-icon" src="icons/search.svg" alt="search_button"></button>
-            <button class="voice-search-button"><img class="voice-search-icon" src="icons/voice-search-icon.svg" alt="voice-search-icon"></button>
+            <button class="search_button"><img class="search-icon" src="icons/search.svg" alt="search_button"><div class="tooltip">Search</div></button>
+            <button class="voice-search-button"><img class="voice-search-icon" src="icons/voice-search-icon.svg" alt="voice-search-icon"><div class="tooltip">Search With Your Voice</div></button>
         </div>
         <div class="right-section">
-            <img class="upload-icon" src="icons/upload.svg" alt="upload">
-            <img class="youtube-apps-icon" src="icons/youtube-apps.svg" alt="youtube-apps">
-            <div class="notification-icon-container"><img class="notifications-icon" src="icons/notifications.svg" alt="notifications"><div class="notification-count">3</div></div>
+            <div class="uplead-button"><img class="upload-icon" src="icons/upload.svg" alt="upload"><div class="tooltip">Upload</div></div>
+            <div class="apps-button"><img class="youtube-apps-icon" src="icons/youtube-apps.svg" alt="youtube-apps"><div class="tooltip">Apps</div></div>
+            <div class="notification-icon-container"><img class="notifications-icon" src="icons/notifications.svg" alt="notifications"><div class="notification-count">3</div><div class="tooltip">Notification</div></div>
             <img class="current-user-icon" src="channel-picture/channel-1.jpeg" alt="channel picture">
         </div>
-    </div>
+    </header>
     <!-- Note : block element take up the entire line , we can easily change this to inline-block using the display properity -->
     <!-- div and paragrafe(p) by default is a block element -->
     <!-- the key fearure of a div is it can contain other element that's why the div is so useful -->
     <!-- divs ar meant to be containers  -->
     <!-- block element takes up the entire line in their container -->
-    <div class="sidebar">sidebar</div>
-    <div class="video-grid">
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails\thumbnail-1.webp" alt="thumbnail-1">
-                <div class="video-time">14:20</div>
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="channel-picture\channel-1.jpeg" alt="channel-picture">
+
+    <nav class="sidebar">
+        <div class="sidebar-link"><img src="icons/home.svg" alt="home"><div>home</div></div>
+        <div class="sidebar-link"><img src="icons/explore.svg" alt="explore"><div>explore</div></div>
+        <div class="sidebar-link"><img src="icons/subscriptions.svg" alt="subscriptions"><div>subscriptions</div></div>
+        <div class="sidebar-link"><img src="icons/originals.svg" alt="originals"><div>originals</div></div>
+        <div class="sidebar-link"><img src="icons/youtube-music.svg" alt="youtube-music"><div>youtube-music</div></div>
+        <div class="sidebar-link"><img src="icons/library.svg" alt="library"><div>library</div></div>
+    </nav>
+    <main>
+        <section class="video-grid">
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails\thumbnail-1.webp" alt="thumbnail-1">
+                    <div class="video-time">14:20</div>
                 </div>
-                <div class="video-info">
-                    <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
-                    <p class="video-author">Marques Brownlee</p>
-                    <p class="video-stats">3.4M views <span>&#183;</span> 6 months ago</p>
-                </div>
-            </div>
-        </div>
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails\thumbnail-2.webp" alt="thumbnail-1">
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="channel-picture\channel-2.jpeg" alt="channel-picture">
-                </div>
-                <div class="video-info">
-                    <p class="video-title">Try Not To Laugh Challenge #9</p>
-                    <p class="video-author">Markiplier</p>
-                    <p class="video-stats">19M views <span>&#183;</span> 4 years ago</p>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="channel-picture\channel-1.jpeg" alt="channel-picture">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                        <p class="video-author">Marques Brownlee</p>
+                        <p class="video-stats">3.4M views <span>&#183;</span> 6 months ago</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails\thumbnail-3.webp" alt="thumbnail-1">
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="channel-picture\channel-3.jpeg" alt="channel-picture">
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails\thumbnail-2.webp" alt="thumbnail-1">
                 </div>
-                <div class="video-info">
-                    <p class="video-title">Crazy Tik Toks Taken Moments Before DISASTER</p>
-                    <p class="video-author">SSSniperWolf</p>
-                    <p class="video-stats">12M views <span>&#183;</span> 1 year ago</p>
-                </div>
-            </div>
-        </div>
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails\thumbnail-4.webp" alt="thumbnail-1">
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="channel-picture\channel-4.jpeg" alt="channel-picture">
-                </div>
-                <div class="video-info">
-                    <p class="video-title">The Simplest Math Problem No One Can Solve - Collatz Conjecture</p>
-                    <p class="video-author">Veritasium</p>
-                    <p class="video-stats">18M views <span>&#183;</span> 4 months ago</p>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="channel-picture\channel-2.jpeg" alt="channel-picture">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">Try Not To Laugh Challenge #9</p>
+                        <p class="video-author">Markiplier</p>
+                        <p class="video-stats">19M views <span>&#183;</span> 4 years ago</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails\thumbnail-3.webp" alt="thumbnail-1">
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="channel-picture\channel-3.jpeg" alt="channel-picture">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">Crazy Tik Toks Taken Moments Before DISASTER</p>
+                        <p class="video-author">SSSniperWolf</p>
+                        <p class="video-stats">12M views <span>&#183;</span> 1 year ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails\thumbnail-4.webp" alt="thumbnail-1">
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="channel-picture\channel-4.jpeg" alt="channel-picture">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">The Simplest Math Problem No One Can Solve - Collatz Conjecture</p>
+                        <p class="video-author">Veritasium</p>
+                        <p class="video-stats">18M views <span>&#183;</span> 4 months ago</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
