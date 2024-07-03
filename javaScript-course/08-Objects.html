@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opjects</title>
+</head>
+<body>
+    <script>
+        const product ={
+            name: 'socks',
+            price: 1090
+        };//this is an object
+        // an object lets us groub myltiple values together
+        // name and price called property
+        
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+        
+        // we can use the property to change a value inside and object
+        product.name = 'cotton socks'
+        console.log(product);
+        
+        // add a value to an object
+        product.newproperty = true;
+        console.log(product);
+        
+        // remove a value from an object
+        delete product.newproperty;
+        console.log(product);
+        
+        // check the type of this value
+        console.log(typeof product);
+
+        // objects make our code more organized
+        /*
+        objects :
+        - let us group multiple values together 
+        - let us use multiple values together
+        */
+        
+        const product2 = {
+            name: 'shirt',
+            'delivery-time': '1 day',
+            // that is call a nested object
+            rating: {
+                stars: 4.5,
+                count: 87
+            },
+            //another type of property we can put in an object is a function
+            fun: function function1 () {
+                console.log('function inside an object!');
+            }
+
+        };
+        console.log (product2);
+        console.log (product2.name);// Dot notation
+        console.log (product2['name']);// bracket notation
+        /*console.log (product2.delivery-time);*/// this property will give us an error because javaScript thinks that this Dash is a minus sign and it's trying to do math 
+        // so in order to use a property like this we have to use bracket notation
+        console.log (product2['delivery-time']);
+        console.log (product2['rating'].count);
+        console.log (product2['rating']['stars']);
+        product2.fun ();
+        console.log (typeof console);
+        console.log (typeof console.log);
+
+        /*
+        We use Json :
+        - when we send data between computers
+        - when we store data
+        */
+
+        JSON.stringify(product2);//convert from javascript object to JSON object
+        //stringify ins a method of JSON object
+        console.log(JSON.stringify(product2));
+        console.log(typeof JSON.stringify(product2));
+        //convert JSON to javascript object
+        JSON.parse(JSON.stringify(product2));
+        console.log(JSON.parse(JSON.stringify(product2)));
+        console.log(typeof JSON.parse(JSON.stringify(product2)));
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+        const object1 = {
+            message: 'hello'
+        };
+        const object2 = object1;
+        
+        object1.message = 'Good job!';
+        console.log(object1);
+        console.log(object2);
+        object2.message = 'Good!';
+        console.log(object1);
+        console.log(object2);
+        
+        const object3 = {
+            message: 'hello'
+        };
+        console.log (object1 === object3);
+        //that will be false even though they have the same values inside and that's because objects are references and this code compares the references and not the values inside the objects
+        console.log (object1 === object2);
+        
+        const object4 = {
+            message: 'hello',
+            price: 799
+        };
+        // const message = object4.message;
+        const { message, price } = object4;//this shortcut is called destructuring
+        //this will take the message property out of object4 and save it in a variable called message 
+        // so this line of code does the same thing as the line above
+        console.log(message);
+        console.log(price);
+
+        // shorthand property
+
+        const object5 = {
+            // message: message
+            message, // do the same as the line above
+            // method: function function1() {
+                // console.log ('method type');
+            // }
+            method() {
+                console.log('method type')
+            }// do the same as the above , called shorthand method syntax
+        };
+
+        console.log(object5)
+        object5.method();
+        </script>
+</body>
+</html>
