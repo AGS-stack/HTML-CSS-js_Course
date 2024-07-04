@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <button>hello</button>
+    <button class="js-button">second button</button>
+    <script>
+        console.log (document.querySelector('button').innerHTML);
+        document.querySelector('button').innerHTML = 'changed';
+        console.log (document.querySelector('.js-button'));
+        
+        document.querySelector('.js-button')
+        .innerHTML = 'test the second button';
+        
+        const buttonElement = document.querySelector('.js-button');
+
+        console.log (`that's a buttonElement = ${buttonElement}`);
+        /*
+        console.log(document.title);
+        document .title = 'changed';
+
+
+        console.log (document.body);
+
+        console.log (typeof document.body);
+        console.log (document.body.innerHTML);
+        document.body.innerHTML = '<button>hello again</button>';
+        */
+
+
+        /*
+        document.body.innerHTML = 'hello'
+        document.title = 'good job!'
+        */
+    </script>
+    <!-- document : is a built-in object  -->
+    <!-- dot notation : means we're accessin a property of the document object called <body> -->
+    <!-- body : is also an object so we can use the dot notation to access aproperty of the body object called innerHTML -->
+    <!-- the document objext is linked to the web page so from these examples it shows us the document object represents or models the web page and that's why we calle this feature the document object model -->
+    <!-- the DOM combines JavaScript and HTML together and it gives JavaScript control of the web page -->
+    <!-- document.querySelector() lets us get any element from the page and put it inside JavaScript -->
+    <!-- HTML elements are JavaScript objects, and remember objects are values and we can save them inside a variable -->
+    </body>
+</body>
+</html>
