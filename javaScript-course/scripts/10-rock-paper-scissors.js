@@ -55,13 +55,6 @@ function playGame(playerMove) {
         score.ties += 1
     }
     
-    if (computerMove === 'rock') {
-        result = 'You win.';
-    } else if (computerMove === 'paper') {
-        result = 'Tie.';
-    } else if (computerMove === 'scissors') {
-        result = 'You lose.';
-    }
 
     localStorage.setItem('score',JSON.stringify(score));
     
