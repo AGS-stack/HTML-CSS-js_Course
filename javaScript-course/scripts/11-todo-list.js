@@ -1,3 +1,4 @@
+const todoList = ['makedinner','wash dishes'];
 const todoArray = [];
 function addTodo () {
     const inputElement = document.querySelector('.js-name-input');
@@ -6,13 +7,12 @@ function addTodo () {
     inputElement.value = '';
     console.log(todoArray);
 }
-const todoList = ['makedinner','wash dishes'];
 
 renderTodoList();
 function renderTodoList() {
     
     let todoListHTML = '';
-    for (let i = 0; i< todoList.length; i++) {
+    for (let i = 0; i < todoList.length; i++) {
         const todo = todoList[i];
         const html = `<p>${todo}</P>`;
         todoListHTML += html;

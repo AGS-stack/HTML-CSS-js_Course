@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions</title>
+</head>
+<body>
+    <script>
+        /*
+        function greeting() {
+            console.log('Hello World!');
+        }
+        greeting();
+
+        const num = 2;
+
+        const function1 = function() {
+            console.log('hello2');
+        };// this is call Anonymous Function which means a function without a name
+
+        console.log(function1);
+        console.log(typeof function1);
+        function1();
+
+        const object1 = {
+            num: 2,
+            fun: function greeting(){
+                console.log('hello3');
+            }
+        };
+        // this saves a function inside this object under the property fun
+        // to access this function we just use the dot notation as normal
+        object1.fun();
+
+
+        function display(param){
+            console.log(param);
+
+        }
+        display(2);
+
+        function run(param){
+            param();//because param contains a function we can actually just call it using brackets
+        }
+        run(function(){
+            console.log('hello4');
+        });// this will take this function and save it inside param
+        // and up in function run(param)
+        */
+        /*
+        . this is calles passing a function into another function
+        . the function that we're passing in is called a callback function (run(function(){console.log('hello4');});)
+
+        */
+       
+        //setTimeout() : allows us to run a function in the future.
+
+        setTimeout(function(){
+            console.log('timeout');
+            console.log('timeout2');
+        },  3000);// this is calles asynchronous code : means the computer won't wait for a line to finish before going to the next line.
+
+        console.log('next line');
+
+        //setInterval() : will keep running the function every time set
+        setInterval(function(){
+            console.log('interval')
+        }, 3000);
+        console.log('next line 2');
+
+    </script>
+</body>
+</html>

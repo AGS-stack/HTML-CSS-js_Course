@@ -8,5 +8,25 @@
 <body>
     <p>that's for commitin localy and see what happen in the remote repository :)</p>
     <p>ok this paragraph is new one for testing the sync configuration we apply with version 3 commit</p>
+    <button onclick="ST();">start/stop</button>
+    <div class="js-active"></div>
+    <script>
+        let c = 0;
+        let va = false;
+        let i;
+        function ST(){
+            if (!va){
+                i = setInterval(function(){
+                    document.querySelector('.js-active').innerHTML = `<p>${c}</p>`;
+                    c++;
+                },1000);
+                va = true;
+            } else {
+                clearInterval(i);
+                va = false;
+            }
+        }
+        
+    </script>
 </body>
 </html>

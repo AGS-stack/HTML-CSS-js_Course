@@ -1,0 +1,37 @@
+body {
+    font-family: Arial;
+    font-weight: bold;
+}
+.todo-input-grid,
+.todo-grid {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;/* sets how many columns are in our grid */
+    /*this will create three columns in the grid the first column will be 200px second 150px and the third one will be 100px*/
+    column-gap: 10px;/*the space between columns*/
+    row-gap: 10px;/*the space between rows*/
+    align-items: center;
+}
+.todo-input-grid {
+    margin-bottom: 10px;
+    align-items: stretch;
+}
+.name-input,
+.due-date-input {
+    font-size: 15px;
+    padding: 6px;
+}
+.add-todo-button,
+.delete-todo-button {
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.add-todo-button {
+    background-color: green;
+}
+.delete-todo-button {
+    background-color: darkred;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
