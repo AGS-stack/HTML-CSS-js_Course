@@ -6,7 +6,23 @@
     <title>Advanced Functions</title>
 </head>
 <body>
+    <button onclick="" class="js-button">Click</button>
     <script>
+        const buttonElement = document.querySelector('.js-button');
+        const eventListenner = () => {
+            console.log('click');
+        };
+        buttonElement.addEventListener('click',eventListenner);// this code does the same thing as the onclick attribute however addeventlistenner has some advantages over using an attribute : 
+        // 1. it lets us add Multiple event listeners for an event
+        // 2. We can remove an event listener 
+
+
+        buttonElement.removeEventListener('click',eventListenner);
+
+        buttonElement.addEventListener('click',() => {
+            console.log('click2');
+        });
+
         /*
         function greeting() {
             console.log('Hello World!');
@@ -40,7 +56,7 @@
         }
         display(2);
 
-        function run(param){
+        unction run(param){
             param();//because param contains a function we can actually just call it using brackets
         }
         run(function(){
@@ -56,6 +72,7 @@
        
         //setTimeout() : allows us to run a function in the future.
 
+        /*
         setTimeout(function(){
             console.log('timeout');
             console.log('timeout2');
@@ -69,6 +86,52 @@
         }, 3000);
         console.log('next line 2');
 
+        */
+
+        /*
+        function firstRegularFunction (){
+
+            console.log('hello');
+        };
+
+        const regularFunction = function() {
+
+            console.log('hello');
+        };
+        
+        // Arrow Funcions : 
+        const arrowFunction = () => {
+            console.log('hello');
+        };
+
+        firstRegularFunction ();
+        regularFunction ();
+        arrowFunction();
+        
+
+        const oneParam = param => {console.log(param+1);};//so when an arrow function only has one parameter these round brackets are optional so we can acutally remove them, it was like that (param).
+
+        oneParam (1);
+
+        const oneLine = () => {
+            return 2 + 3;
+        };// so when an arrow function only has one line like this we can acutally put it on the same line as the arrow, the curly brackets are actually optional so we can remove them, and we can also remove the return statement, to be like that 
+        // const online = () => 2 + 3 ;
+
+        console.log (oneLine());
+
+        // best practice, when passing a functino into another function. => use arrow functinos because it makes our code easier to read
+        
+        const object2 = {
+            method: () => {
+
+            },
+            method(){
+
+            }//that us called shorthand method syntax
+
+        };
+        */
     </script>
 </body>
 </html>
