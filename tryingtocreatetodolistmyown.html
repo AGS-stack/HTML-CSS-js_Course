@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolistmyown</title>
+    <style>
+        body {
+            font-family: Arial;
+            font-weight: bold;
+        }
+        .input-div-part,
+        .savedTasks {
+            display: grid;
+            grid-template-columns: 200px 150px 100px;/* sets how many columns are in our grid */
+            /*this will create three columns in the grid the first column will be 200px second 150px and the third one will be 100px*/
+            column-gap: 10px;/*the space between columns*/
+            row-gap: 10px;/*the space between rows*/
+            align-items: center;
+        }
+        .input-div-part,
+        .savedTasks {
+            margin-bottom: 10px;
+            align-items: stretch;
+        }
+        .input-task-name,
+        .input-task-date {
+            font-size: 15px;
+            padding: 6px;
+        }
+        .addButton,
+        .deleteButton {
+            color: white;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .addButton {
+            background-color: green;
+        }
+        .deleteButton {
+            background-color: darkred;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ToDolist</h1>
+    <div class="input-div-part">
+        <input class="js-input-task-name input-task-name" type="text" placeholder="INPUT TASK">
+        <input class="js-input-task-date input-task-date" type="date">
+        <button onclick="addButton()" class="addButton">ADD</button>
+    </div>
+    <div class="savedTasks"></div>
+    
+    <script>
+        const todolist = [];
+        function addButton () {
+            const task = document.querySelector('.js-input-task-name').value;
+            const date = document.querySelector('.js-input-task-date').value;
+            todolist.push({name:task,duedate:date});
+            document.querySelector('.js-input-task-name').value = '';
+            document.querySelector('.js-input-task-date').value = '';
+            displayTasks ()
+        }
+        function displayTasks () {
+            document.querySelector('.savedTasks').innerHTML = "";
+            for (let i = todolist.length; i >= 0 ; i--) {
+                const innerh = `<div>${todolist[i-1].name}</div><div>${todolist[i-1].duedate}</div><button class="deleteButton" onclick="todolist.splice(${i-1}, 1);displayTasks ();">Delete</button>`;
+                document.querySelector('.savedTasks').innerHTML += `${innerh}`;
+            }
+        }
+    </script>
+</body>
+</html>

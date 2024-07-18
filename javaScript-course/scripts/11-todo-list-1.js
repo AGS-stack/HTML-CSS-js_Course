@@ -24,8 +24,7 @@ function renderTodoList() {
 
 
 function addTodo () {
-    const inputElement = document.querySelector('.js-name-input');
-    const name = inputElement.value;
+    const name = document.querySelector('.js-name-input').value;
     const dueDate = document.querySelector('.js-due-date-input').value;
     todoList.push ({name,dueDate});
     inputElement.value = '';
