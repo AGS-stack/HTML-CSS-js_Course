@@ -1,0 +1,14 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Add more styles as needed */
+.data-container{
+    background-color: lightblue;
+    width: 200px;
+}
+.button-div {
+    display: grid;
+    grid-template-columns: 60px;
+}

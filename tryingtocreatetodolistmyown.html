@@ -67,8 +67,13 @@
         function displayTasks () {
             document.querySelector('.savedTasks').innerHTML = "";
             for (let i = todolist.length; i >= 0 ; i--) {
-                const innerh = `<div>${todolist[i-1].name}</div><div>${todolist[i-1].duedate}</div><button class="deleteButton" onclick="todolist.splice(${i-1}, 1);displayTasks ();">Delete</button>`;
-                document.querySelector('.savedTasks').innerHTML += `${innerh}`;
+                if (i === 0) {
+                    continue
+                } else {
+                    const innerh = `<div>${todolist[i-1].name}</div><div>${todolist[i-1].duedate}</div><button class="deleteButton" onclick="todolist.splice(${i-1}, 1);displayTasks ();">Delete</button>`;
+                    document.querySelector('.savedTasks').innerHTML += `${innerh}`;
+
+                }
             }
         }
     </script>
